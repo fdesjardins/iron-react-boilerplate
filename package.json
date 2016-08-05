@@ -1,0 +1,32 @@
+{
+  "name": "iron-react-starter",
+  "version": "0.0.0",
+  "description": "React front end on a Rust and Iron back end",
+  "license": "MIT",
+  "repository": "fdesjardins/iron-react-starter",
+  "author": {
+    "name": "Forrest Desjardins",
+    "email": "desjardinsfg@gmail.com",
+    "url": "github.com/fdesjardins"
+  },
+  "engines": {
+    "node": ">=4"
+  },
+  "scripts": {
+    "test": "xo && ava"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "ava": "^0.15.2",
+    "babel-core": "^6.13.1",
+    "babel-loader": "^6.2.4",
+    "react": "^15.3.0",
+    "react-redux": "^4.4.5",
+    "react-router-redux": "^4.0.5",
+    "webpack": "^1.13.1",
+    "xo": "^0.16.0"
+  },
+  "xo": {
+    "esnext": true
+  }
+}

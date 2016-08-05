@@ -1,0 +1,16 @@
+[package]
+name = "iron-react-starter"
+version = "0.1.0"
+authors = ["Forrest Desjardins <desjardinsfg@gmail.com>"]
+
+[[bin]]
+name = "server"
+path = "server/main.rs"
+test = true
+
+[dependencies]
+iron = "*"
+router = "*"
+logger = "*"
+mount = "*"
+staticfile = "*"
