@@ -1,1 +1,1 @@
-console.log('here')
+console.log('main.js')

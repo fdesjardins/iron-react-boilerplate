@@ -27,8 +27,8 @@ fn main() {
 
 	let mut mount = Mount::new();
     mount.mount("/api", router);
-	mount.mount("/", Static::new(Path::new("target/")));
-	mount.mount("/dist/public", Static::new(Path::new("dist/public")));
+	mount.mount("/", Static::new(Path::new("dist/public")));
+	// mount.mount("/dist/public", Static::new(Path::new("dist/public")));
 
 	let mut chain = Chain::new(mount);
 

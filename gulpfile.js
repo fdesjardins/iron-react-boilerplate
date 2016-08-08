@@ -41,19 +41,26 @@ gulp.task('rust', (done) => {
 	})
 })
 
-gulp.task('build', ['webpack', 'styles', 'rust'])
-
-gulp.task('watch', (done) => {
-	gulp.watch('client/scripts/**/*.js', ['webpack'])
-	gulp.watch('client/{styles,scripts}/**/*.css', ['styles'])
-	gulp.watch('server/**/*.rs', ['rust'])
-
+gulp.task('serve', () => {
 	plugins.nodemon({
 		exec: 'dist/server/**/server',
 		watch: 'dist/server/**/server',
 		delay: 3000
 	})
+})
 
+gulp.task('copy', () => {
+  gulp.src('public/**')
+    .pipe(gulp.dest('dist/public'))
+})
+
+gulp.task('build', ['webpack', 'styles', 'rust', 'copy'])
+
+gulp.task('watch', (done) => {
+	gulp.watch('client/scripts/**/*.js', ['webpack'])
+	gulp.watch('client/{styles,scripts}/**/*.css', ['styles'])
+	gulp.watch('server/**/*.rs', ['rust'])
+  gulp.watch('public/**', ['copy'])
 	done()
 })
 
