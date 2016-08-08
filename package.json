@@ -1,5 +1,5 @@
 {
-  "name": "iron-react-starter",
+  "name": "iron-react-boilerplate",
   "version": "0.0.0",
   "description": "React front end on a Rust and Iron back end",
   "license": "MIT",

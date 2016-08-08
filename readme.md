@@ -1,4 +1,4 @@
-# iron-react-starter [![Build Status](https://travis-ci.org/fdesjardins/iron-react-starter.svg?branch=master)](https://travis-ci.org/fdesjardins/iron-react-starter)
+# iron-react-boilerplate [![Build Status](https://travis-ci.org/fdesjardins/iron-react-boilerplate.svg?branch=master)](https://travis-ci.org/fdesjardins/iron-react-boilerplate)
 
 > Do not use this yet - under heavy development
 
