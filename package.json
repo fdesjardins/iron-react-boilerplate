@@ -20,10 +20,17 @@
     "ava": "^0.15.2",
     "babel-core": "^6.13.1",
     "babel-loader": "^6.2.4",
+    "gulp": "^3.9.1",
+    "gulp-load-plugins": "^1.2.4",
+    "gulp-nodemon": "^2.1.0",
+    "gulp-postcss": "^6.1.1",
+    "nodemon": "^1.10.0",
+    "postcss-cssnext": "^2.7.0",
     "react": "^15.3.0",
     "react-redux": "^4.4.5",
     "react-router-redux": "^4.0.5",
     "webpack": "^1.13.1",
+    "webpack-stream": "^3.2.0",
     "xo": "^0.16.0"
   },
   "xo": {

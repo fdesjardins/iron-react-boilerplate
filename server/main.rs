@@ -20,7 +20,7 @@ fn main() {
     let (logger_before, logger_after) = Logger::new(Some(format.unwrap()));
 
 	fn hello_world(_: &mut Request) -> IronResult<Response> {
-		Ok(Response::with((status::Ok, "Hello Woarld!")))
+		Ok(Response::with((status::Ok, "Hello sdsdssssssssdsassss!")))
 	}
 
  	let mut router = Router::new();
@@ -40,7 +40,4 @@ fn main() {
     chain.link_after(logger_after);
 
     Iron::new(chain).http("0.0.0.0:8080").unwrap();
-
-	// Iron::new(hello_world).http("localhost:3000").unwrap();
-	println!("On 8080");
 }
