@@ -1,4 +1,4 @@
 node_modules
 Cargo.lock
 target
-public
+dist

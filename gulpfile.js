@@ -23,7 +23,7 @@ gulp.task('eslint', () => {
 gulp.task('webpack', () => {
 	return gulp.src('client/scripts/main.js')
     .pipe(webpack(webpackConfig))
-    .pipe(gulp.dest('public/js'))
+    .pipe(gulp.dest('dist/client'))
 })
 
 gulp.task('styles', () => {
@@ -42,8 +42,8 @@ gulp.task('watch', (done) => {
 	gulp.watch('server/**/*.rs', ['rust'])
 
 	plugins.nodemon({
-    exec: 'target/**/server',
-    watch: ['target/**/server']
+    exec: 'dist/server/**/server',
+    watch: ['dist/server/**/server']
 	})
 
 	done()
