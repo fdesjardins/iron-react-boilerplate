@@ -14,14 +14,13 @@ use router::Router;
 use mount::Mount;
 use staticfile::Static;
 
+fn hello_world(_: &mut Request) -> IronResult<Response> {
+	Ok(Response::with((status::Ok, "Hello world!")))
+}
+
 fn main() {
-	// env_logger::init().unwrap();
     let format = Format::new("{method} {uri} -> {status} ({response-time} ms)", vec![], vec![]);
     let (logger_before, logger_after) = Logger::new(Some(format.unwrap()));
-
-	fn hello_world(_: &mut Request) -> IronResult<Response> {
-		Ok(Response::with((status::Ok, "Hello sdsdssssssssdsassss!")))
-	}
 
  	let mut router = Router::new();
     router.get("/hello", hello_world);
@@ -29,15 +28,14 @@ fn main() {
 	let mut mount = Mount::new();
     mount.mount("/api", router);
 	mount.mount("/", Static::new(Path::new("target/")));
-	mount.mount("/public", Static::new(Path::new("public/")));
+	mount.mount("/dist/public", Static::new(Path::new("dist/public")));
 
 	let mut chain = Chain::new(mount);
-    // chain.link_before(sessions_controller);
 
     chain = Chain::new(chain);
-    // chain.around(login_manager);
     chain.link_before(logger_before);
     chain.link_after(logger_after);
 
+	println!("Server running at 0.0.0.0:8080");
     Iron::new(chain).http("0.0.0.0:8080").unwrap();
 }

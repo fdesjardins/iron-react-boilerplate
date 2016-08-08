@@ -24,6 +24,8 @@
     "gulp-load-plugins": "^1.2.4",
     "gulp-nodemon": "^2.1.0",
     "gulp-postcss": "^6.1.1",
+    "gulp-sync": "^0.1.4",
+    "gulp-wait": "0.0.2",
     "nodemon": "^1.10.0",
     "postcss-cssnext": "^2.7.0",
     "react": "^15.3.0",
