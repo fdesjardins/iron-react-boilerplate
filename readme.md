@@ -7,7 +7,7 @@
 - Redux
 - React Router Redux
 - Webpack
-- Babela
+- Babel
 - PostCSS
 - Local Authentication
 - OAuth 2.0 Authentication
